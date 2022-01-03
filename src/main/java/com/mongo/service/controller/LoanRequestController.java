@@ -42,4 +42,20 @@ public class LoanRequestController {
             return ResponseEntity.status(HttpStatus.OK).body("Loan Request submitted successfully. Please query the UUID to get the status -> ".concat(" "+request.getUuid()));
     }
 
+
+    /*@GetMapping("/status")
+    @Bean
+    ApplicationRunner runner (ConsumerFactory< String, String> cf){
+        return args -> {
+            try (Consumer<String, String> consumer = cf.createConsumer()) {
+                TopicPartition tp = new TopicPartition("LOAN_STATUS_OUT", 0);
+                consumer.assign(Collections.singleton(tp));
+                consumer.seek(tp, 2);
+                ConsumerRecords<String, String> records = consumer.poll(Duration.ofSeconds(5));
+                System.out.println(records.iterator().next().value());
+            }
+        };
+    }*/
+
+
 }

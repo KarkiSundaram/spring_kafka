@@ -25,7 +25,4 @@ public class KafkaPublisher {
                 System.out.println("  Kafka Send response -----------> " +result.toString());
         }
 
-
-
-
 }

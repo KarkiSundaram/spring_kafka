@@ -15,6 +15,9 @@ public class LoanRequest {
     private String loanPurpose;
     private BigDecimal loanAmount;
 
+    public LoanRequest() {
+    }
+
     public LoanRequest(String id, String applicantName, String bankName, String loanPurpose, BigDecimal loanAmount) {
         this.id = id;
         this.applicantName = applicantName;
